@@ -8,6 +8,10 @@ import java.util.List;
 
 public class SpeakerServiceImpl implements SpeakerService {
     private SpeakerRepository repository ;
+    //adding a constructor
+    public SpeakerServiceImpl (SpeakerRepository speakerRepository){
+            repository = speakerRepository;
+    }
     @Override
     public List<Speaker> findAll(){
         return repository.findAll();
